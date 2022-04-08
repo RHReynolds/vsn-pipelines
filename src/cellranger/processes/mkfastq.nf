@@ -4,7 +4,7 @@ toolParams = params.tools.cellranger
 
 process SC__CELLRANGER__MKFASTQ {
 
-	publishDir "${params.global.outdir}/fastqs", saveAs: { outputF = file(it); "${outputF.getParent().getName()}/${outputF.name}" }, mode: 'link', overwrite: true
+	publishDir "${params.global.outdir}/fastqs", saveAs: { outputF = file(it); "${outputF.getParent().getName()}/${outputF.name}" }, mode: "${params.utils.publish.mode}", overwrite: true
   	container toolParams.container
     label 'compute_resources__cellranger_mkfastq'
 
