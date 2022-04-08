@@ -13,7 +13,7 @@ process SC__CELLRANGER__MKFASTQ {
     	file(runFolder)
 
   	output:
-    	path "*/outs/fastq_path/*/*/*.fastq.gz"
+    	path "*/outs/fastq_path/*/*.fastq.gz"
 
   	script:
 		"""
